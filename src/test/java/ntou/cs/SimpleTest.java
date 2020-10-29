@@ -1,4 +1,4 @@
-package ntou.cs.test;
+package ntou.cs;
 import ntou.cs.main.Arithmetic;
 
 import static org.junit.Assert.*;

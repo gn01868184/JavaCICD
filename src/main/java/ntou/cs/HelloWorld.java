@@ -1,4 +1,4 @@
-package ntou.cs.main;
+package ntou.cs;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,7 +17,7 @@ public class HelloWorld extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
     /**
-     * Default constructor. 
+     * Default constructor.
      */
     public HelloWorld() {
         // TODO Auto-generated constructor stub
@@ -30,12 +30,12 @@ public class HelloWorld extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.setCharacterEncoding("UTF-8");
 		request.setCharacterEncoding("UTF-8");
-		
+
 		String requestUri = request.getRequestURI();
-		
+
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		
+
 		out.println("<!DOCTYPE html>");
 		out.println("<html>");
 		out.println("<head>");
@@ -48,7 +48,7 @@ public class HelloWorld extends HttpServlet {
 		out.println("Hello World");
 		out.println("</body>");
 		out.println("</html>");
-		
+
 		out.flush();
 		out.close();
 	}
