@@ -1,6 +1,6 @@
-package io.github.joaomlneto.travis_ci_tutorial_java;
+package ntou.cs.main;
 
-public class SimpleCalculator {
+public class Arithmetic {
 	public int add(int a, int b) {
 		return a + b;
 	}
@@ -12,8 +12,5 @@ public class SimpleCalculator {
 	}
 	public int div(int a, int b) {
 		return a / b;
-	}
-	public static final void main(String[] args) {
-		System.out.println("Hello world?");
 	}
 }
