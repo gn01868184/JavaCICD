@@ -12,53 +12,21 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class HelloWorld
  */
-@WebServlet("/HelloWorld")
-public class HelloWorld extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+ public class HelloWorld extends HttpServlet {
 
-    /**
-     * Default constructor.
-     */
-    public HelloWorld() {
-        // TODO Auto-generated constructor stub
-    }
+     @Override
+     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+             throws ServletException, IOException {
+         resp.getWriter().print("Hello from Java!\n");
+     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.setCharacterEncoding("UTF-8");
-		request.setCharacterEncoding("UTF-8");
-
-		String requestUri = request.getRequestURI();
-
-		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
-
-		out.println("<!DOCTYPE html>");
-		out.println("<html>");
-		out.println("<head>");
-		out.println("<title>Hello world</title>");
-		out.println("</head>");
-		out.println("<body>");
-		out.println("<H1>");
-		out.println("This is example");
-		out.println("</H1>");
-		out.println("Hello World");
-		out.println("</body>");
-		out.println("</html>");
-
-		out.flush();
-		out.close();
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
-
-}
+     public static void main(String[] args) throws Exception{
+         Server server = new Server(Integer.valueOf(System.getenv("PORT")));
+         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
+         context.setContextPath("/");
+         server.setHandler(context);
+         context.addServlet(new ServletHolder(new HelloWorld()),"/*");
+         server.start();
+         server.join();
+     }
+ }
