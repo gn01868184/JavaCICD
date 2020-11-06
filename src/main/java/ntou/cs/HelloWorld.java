@@ -13,6 +13,7 @@ public class HelloWorld extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
+        req.setCharacterEncoding("UTF-8");
         PrintWriter writer = resp.getWriter();
         writer.println("<!DOCTYPE html>");
         writer.println("<html>");
@@ -47,7 +48,7 @@ public class HelloWorld extends HttpServlet {
         writer.println("<div class='number' id='result'>Result</div>");
         writer.println("</body>");
         writer.println("</html>");
-        
+
         writer.close();
     }
 
