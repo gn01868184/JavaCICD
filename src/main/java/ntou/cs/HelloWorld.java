@@ -14,7 +14,7 @@ public class HelloWorld extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         PrintWriter writer = resp.getWriter();
-        writer.println("<head>
+        writer.println('<head>
             <meta charset="utf-8">
             <title>Basic DOM</title>
             <style type="text/CSS">
@@ -36,7 +36,7 @@ public class HelloWorld extends HttpServlet {
         			color: dodgerblue;
         		}
         	</style>
-        </head>");
+        </head>');
         writer.println('<body>
             <h1>四則運算結果:</h1>
             <div class="number" id="num1">Number1</div>
