@@ -37,14 +37,14 @@ public class HelloWorld extends HttpServlet {
         		}
         	</style>
         </head>");
-        writer.println("<body>
+        writer.println('<body>
             <h1>四則運算結果:</h1>
             <div class="number" id="num1">Number1</div>
             <div id="op">+</div>
             <div class="number" id="num2">Number2</div>
             <div>=</div>
             <div class="number" id="result">Result</div>
-        </body>");
+        </body>');
 
 
         writer.close();
