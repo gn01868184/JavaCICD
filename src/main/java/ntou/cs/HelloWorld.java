@@ -6,7 +6,6 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.WebServlet;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.*;
-import javax.servlet.jsp.*;
 
 public class HelloWorld extends HttpServlet {
 
