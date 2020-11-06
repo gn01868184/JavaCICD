@@ -3,16 +3,16 @@ package ntou.cs;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
-import org.eclipse.jetty.server.Server;
 import javax.servlet.annotation.WebServlet;
+import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.*;
+import javax.servlet.jsp.*;
 
 public class HelloWorld extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        resp.setContentType("text/html; charset=utf-8");
         req.getRequestDispatcher("/hello.jsp").forward(req, resp);
     }
 
