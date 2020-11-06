@@ -8,7 +8,10 @@ import javax.servlet.annotation.WebServlet;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.*;
 
+import ntou.cs.Arithmetic;
+
 public class HelloWorld extends HttpServlet {
+    Arithmetic calc = new Arithmetic();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -40,12 +43,12 @@ public class HelloWorld extends HttpServlet {
         writer.println("</head>");
 
         writer.println("<body>");
-        writer.println("<h1>四則運算結果:</h1>");
-        writer.println("<div class='number' id='num1'>Number1</div>");
+        writer.println("<h1>加法:</h1>");
+        writer.println("<div class='number' id='num1'>1</div>");
         writer.println("<div id='op'>+</div>");
-        writer.println("<div class='number' id='num2'>Number2</div>");
+        writer.println("<div class='number' id='num2'>1</div>");
         writer.println("<div>=</div>");
-        writer.println("<div class='number' id='result'>Result</div>");
+        writer.println("<div class='number' id='result'>" + calc.add(1, 1) + "</div>");
         writer.println("</body>");
         writer.println("</html>");
 
