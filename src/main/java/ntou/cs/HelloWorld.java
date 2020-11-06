@@ -4,6 +4,7 @@ import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import org.eclipse.jetty.server.Server;
+import javax.servlet.annotation.WebServlet;
 import org.eclipse.jetty.servlet.*;
 
 public class HelloWorld extends HttpServlet {
@@ -11,7 +12,8 @@ public class HelloWorld extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        req.getRequestDispatcher("hello.jsp").forward(req, resp);
+        resp.setContentType("text/html; charset=utf-8");
+        req.getRequestDispatcher("/hello.jsp").forward(req, resp);
     }
 
     public static void main(String[] args) throws Exception{
