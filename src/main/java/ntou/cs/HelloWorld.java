@@ -7,6 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.*;
 
+@WebServlet("/")
 public class HelloWorld extends HttpServlet {
 
     @Override
