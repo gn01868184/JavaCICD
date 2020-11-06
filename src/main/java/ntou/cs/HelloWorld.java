@@ -14,6 +14,8 @@ public class HelloWorld extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         PrintWriter writer = resp.getWriter();
+        writer.println("<!DOCTYPE html>");
+        writer.println("<html>");
         writer.println("<head>");
         writer.println("<meta charset='utf-8'>");
         writer.println("<title>Basic DOM</title>");
@@ -44,7 +46,8 @@ public class HelloWorld extends HttpServlet {
         writer.println("<div>=</div>");
         writer.println("<div class='number' id='result'>Result</div>");
         writer.println("</body>");
-
+        writer.println("</html>");
+        
         writer.close();
     }
 
