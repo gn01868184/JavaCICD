@@ -12,7 +12,9 @@ public class HelloWorld extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        req.getRequestDispatcher("/hello.jsp").forward(req, resp);
+        PrintWriter writer = response.getWriter();
+        writer.println("<h1>Hello</h1>");
+        writer.close();
     }
 
     public static void main(String[] args) throws Exception{
