@@ -11,7 +11,7 @@ public class HelloWorld extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
-        resp.getWriter().print("Hello from Java!\n");
+        req.getRequestDispatcher("hello.jsp").forward(req, resp);
     }
 
     public static void main(String[] args) throws Exception{
