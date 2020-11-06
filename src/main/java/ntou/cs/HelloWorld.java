@@ -16,8 +16,8 @@ public class HelloWorld extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
               Arithmetic calc = new Arithmetic();
-              PrintWriter writer = resp.getWriter();
               resp.setContentType("text/html; charset=UTF-8");
+              PrintWriter writer = resp.getWriter();
               writer.println("<!DOCTYPE html>");
               writer.println("<html>");
               writer.println("<head>");
