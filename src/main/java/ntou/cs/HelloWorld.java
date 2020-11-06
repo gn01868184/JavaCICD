@@ -43,30 +43,30 @@ public class HelloWorld extends HttpServlet {
               writer.println("</head>");
 
               writer.println("<body>");
-              writer.println("<h1>加法:</h1>");
+              writer.println("<div><h1>加法:</h1>");
               writer.println("<div class='number' id='num1'>1</div>");
               writer.println("<div id='op'>+</div>");
               writer.println("<div class='number' id='num2'>1</div>");
               writer.println("<div>=</div>");
-              writer.println("<div class='number' id='result'>" + calc.add(1, 1) + "</div><p>");
-              writer.println("<h1>減法:</h1>");
+              writer.println("<div class='number' id='result'>" + calc.add(1, 1) + "</div></div>");
+              writer.println("<div><h1>減法:</h1>");
               writer.println("<div class='number' id='num1'>1</div>");
               writer.println("<div id='op'>-</div>");
               writer.println("<div class='number' id='num2'>1</div>");
               writer.println("<div>=</div>");
-              writer.println("<div class='number' id='result'>" + calc.sub(1, 1) + "</div><p>");
-              writer.println("<h1>乘法:</h1>");
+              writer.println("<div class='number' id='result'>" + calc.sub(1, 1) + "</div></div>");
+              writer.println("<div><h1>乘法:</h1>");
               writer.println("<div class='number' id='num1'>3</div>");
               writer.println("<div id='op'>*</div>");
               writer.println("<div class='number' id='num2'>5</div>");
               writer.println("<div>=</div>");
-              writer.println("<div class='number' id='result'>" + calc.mul(3, 5) + "</div><p>");
-              writer.println("<h1>除法:</h1>");
+              writer.println("<div class='number' id='result'>" + calc.mul(3, 5) + "</div></div>");
+              writer.println("<div><h1>除法:</h1>");
               writer.println("<div class='number' id='num1'>8</div>");
               writer.println("<div id='op'>/</div>");
               writer.println("<div class='number' id='num2'>2</div>");
               writer.println("<div>=</div>");
-              writer.println("<div class='number' id='result'>" + calc.div(8, 2) + "</div><p>");
+              writer.println("<div class='number' id='result'>" + calc.div(8, 2) + "</div></div>");
               writer.println("</body>");
               writer.println("</html>");
 
